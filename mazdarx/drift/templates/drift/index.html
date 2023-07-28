@@ -1,0 +1,9 @@
+{% if latest_car_list %}
+    <ul>
+    {% for car in latest_car_list %}
+        <li><a href="/drift/{{ car.id }}/">{{ car.car_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Cars are available.</p>
+{% endif %}
